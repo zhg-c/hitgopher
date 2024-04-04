@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>res/hited.jfif</file>
+        <file>res/show.jfif</file>
+    </qresource>
+</RCC>
