@@ -2,8 +2,11 @@
 #define MAINWINDOW_H
 
 #include "button.h"
+#include "settingdlg.h"
 #include <QMainWindow>
 #include <QTimer>
+#include <vector>
+#include <QGridLayout>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -18,14 +21,20 @@ public:
     ~MainWindow();
 private:
     void InitDlg();
+    void InitBtns();
+    void InitTimer();
 private slots:
     void onClicked();
     void onTimeout();
+    void onSettings(const std::tuple<int,int,int> &tSets);
 private:
     Ui::MainWindow *ui;
     QTimer m_timer;
-    Button *m_btns[9];
+    std::vector<Button *> m_btns;
     Button *m_preBtn;
     int m_preNum;
+    std::tuple<int,int,int> m_tSets;
+    SettingDlg *m_settingDlg;
+    QGridLayout *m_glayout;
 };
 #endif // MAINWINDOW_H

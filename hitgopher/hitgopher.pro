@@ -18,14 +18,17 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     button.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    settingdlg.cpp
 
 HEADERS += \
     button.h \
-    mainwindow.h
+    mainwindow.h \
+    settingdlg.h
 
 FORMS += \
-    mainwindow.ui
+    mainwindow.ui \
+    settingdlg.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
