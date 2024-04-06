@@ -7,6 +7,7 @@
 #include <QToolBar>
 #include <QAction>
 #include <QEventLoop>
+#include <QMediaContent>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -26,6 +27,8 @@ MainWindow::~MainWindow()
 
 void MainWindow::InitDlg()
 {
+    m_player = new QMediaPlayer(this);
+    m_player->setMedia(QMediaContent(QUrl("qrc:/res/hit.mp3")));
     QWidget *centralWidget = new QWidget(this);
     setCentralWidget(centralWidget);
     m_glayout = new QGridLayout;
@@ -77,6 +80,7 @@ void MainWindow::InitTimer()
 
 void MainWindow::onClicked()
 {
+    m_player->play();
     if(!m_preBtn)
     {
         return;

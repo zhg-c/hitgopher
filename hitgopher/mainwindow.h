@@ -7,6 +7,7 @@
 #include <QTimer>
 #include <vector>
 #include <QGridLayout>
+#include <QMediaPlayer>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -36,5 +37,6 @@ private:
     std::tuple<int,int,int> m_tSets;
     SettingDlg *m_settingDlg;
     QGridLayout *m_glayout;
+    QMediaPlayer *m_player;
 };
 #endif // MAINWINDOW_H

@@ -2,5 +2,6 @@
     <qresource prefix="/">
         <file>res/hited.jfif</file>
         <file>res/show.jfif</file>
+        <file>res/hit.mp3</file>
     </qresource>
 </RCC>
